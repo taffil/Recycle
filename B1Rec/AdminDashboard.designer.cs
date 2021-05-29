@@ -198,7 +198,6 @@ namespace B1Rec
             this.tabUsers.TabIndex = 0;
             this.tabUsers.Text = "Users";
             this.tabUsers.UseVisualStyleBackColor = true;
-            //this.tabUsers.Click += new System.EventHandler(this.tabUsers_Click);
             // 
             // btnRefresh
             // 
@@ -790,7 +789,7 @@ namespace B1Rec
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 23);
             this.btnPrint.TabIndex = 107;
-            this.btnPrint.Text = "Export";
+            this.btnPrint.Text = "PDF";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
