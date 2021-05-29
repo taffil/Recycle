@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RecycleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Billings">
+          <Key>
+            <PropertyRef Name="numri_i_fatures" />
+          </Key>
+          <Property Name="numri_i_fatures" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="data" Type="datetime" />
+          <Property Name="totali_i_fatures" Type="float" />
+          <Property Name="baker" Type="float" />
+          <Property Name="mesing" Type="float" />
+          <Property Name="alumin" Type="float" />
+          <Property Name="plumb" Type="float" />
+          <Property Name="rosfaj" Type="float" />
+          <Property Name="kanaqe" Type="float" />
+          <Property Name="akumulator" Type="float" />
+          <Property Name="hekur" Type="float" />
+          <Property Name="shishe" Type="float" />
+          <Property Name="qese" Type="float" />
+          <Property Name="shitesi" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Blerjet">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Shitesi" Type="varchar" MaxLength="50" />
+          <Property Name="Shuma" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Data" Type="datetime" />
+          <Property Name="Blersi" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="pazariDitor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Blerja" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Hyrja" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Data" Type="datetime" />
+          <Property Name="Mbetja" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="first_name" Type="varchar" MaxLength="50" />
+          <Property Name="last_name" Type="varchar" MaxLength="50" />
+          <Property Name="username" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="password" Type="varchar" MaxLength="50" />
+          <Property Name="user_type" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="RecycleModelStoreContainer">
+          <EntitySet Name="Billings" EntityType="Self.Billings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Blerjet" EntityType="Self.Blerjet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pazariDitor" EntityType="Self.pazariDitor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RecycleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Billing">
+          <Key>
+            <PropertyRef Name="numri_i_fatures" />
+          </Key>
+          <Property Name="numri_i_fatures" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="data" Type="DateTime" Precision="3" />
+          <Property Name="totali_i_fatures" Type="Double" />
+          <Property Name="baker" Type="Double" />
+          <Property Name="mesing" Type="Double" />
+          <Property Name="alumin" Type="Double" />
+          <Property Name="plumb" Type="Double" />
+          <Property Name="rosfaj" Type="Double" />
+          <Property Name="kanaqe" Type="Double" />
+          <Property Name="akumulator" Type="Double" />
+          <Property Name="hekur" Type="Double" />
+          <Property Name="shishe" Type="Double" />
+          <Property Name="qese" Type="Double" />
+          <Property Name="shitesi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Blerjet">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Shitesi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Shuma" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Data" Type="DateTime" Precision="3" />
+          <Property Name="Blersi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pazariDitor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Blerja" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Hyrja" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Data" Type="DateTime" Precision="3" />
+          <Property Name="Mbetja" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="user_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="RecycleEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Billings" EntityType="Self.Billing" />
+          <EntitySet Name="Blerjets" EntityType="Self.Blerjet" />
+          <EntitySet Name="pazariDitors" EntityType="Self.pazariDitor" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RecycleModelStoreContainer" CdmEntityContainer="RecycleEntities">
+          <EntitySetMapping Name="Billings">
+            <EntityTypeMapping TypeName="RecycleModel.Billing">
+              <MappingFragment StoreEntitySet="Billings">
+                <ScalarProperty Name="numri_i_fatures" ColumnName="numri_i_fatures" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="totali_i_fatures" ColumnName="totali_i_fatures" />
+                <ScalarProperty Name="baker" ColumnName="baker" />
+                <ScalarProperty Name="mesing" ColumnName="mesing" />
+                <ScalarProperty Name="alumin" ColumnName="alumin" />
+                <ScalarProperty Name="plumb" ColumnName="plumb" />
+                <ScalarProperty Name="rosfaj" ColumnName="rosfaj" />
+                <ScalarProperty Name="kanaqe" ColumnName="kanaqe" />
+                <ScalarProperty Name="akumulator" ColumnName="akumulator" />
+                <ScalarProperty Name="hekur" ColumnName="hekur" />
+                <ScalarProperty Name="shishe" ColumnName="shishe" />
+                <ScalarProperty Name="qese" ColumnName="qese" />
+                <ScalarProperty Name="shitesi" ColumnName="shitesi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Blerjets">
+            <EntityTypeMapping TypeName="RecycleModel.Blerjet">
+              <MappingFragment StoreEntitySet="Blerjet">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Shitesi" ColumnName="Shitesi" />
+                <ScalarProperty Name="Shuma" ColumnName="Shuma" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Blersi" ColumnName="Blersi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pazariDitors">
+            <EntityTypeMapping TypeName="RecycleModel.pazariDitor">
+              <MappingFragment StoreEntitySet="pazariDitor">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Blerja" ColumnName="Blerja" />
+                <ScalarProperty Name="Hyrja" ColumnName="Hyrja" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Mbetja" ColumnName="Mbetja" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="RecycleModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="user_type" ColumnName="user_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
